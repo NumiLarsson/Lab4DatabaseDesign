@@ -62,7 +62,7 @@ public class Lab4DatabaseDesign {
 			rs = st.executeQuery();
 
 			Database.printPretty(rs);
-
+			db.con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -77,7 +77,7 @@ class Database {// postgresqlDB database;
 	// Statement st;
 	// ResultSet rs;
 
-	static final String URL = "jdbc:mysql://localhost/";
+	static final String URL = "jdbc:mysql://groucho.it.uu.se/";
 	static final String DATABASE = "ht16_hoteldb_dv5";
 	// static final String TABLENAME = "items";
 	// DATABASE MUST BE IN LOWERCASE for some reason.
